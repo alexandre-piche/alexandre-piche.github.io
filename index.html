@@ -4,20 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio d'Alexandre Piché : 3D, programmation et shaders pour des visuels vivants et créatifs.">
     <title>Alexandre Piché | Portfolio</title>
 
     <link rel="stylesheet" href="styles/main.css" />
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/components/ShaderCanvas.js" defer></script>
 
 </head>
 
 <body>
+    <canvas class="behind fixed" data-shader="assets/shaders/grass.frag" data-seed="1"></canvas>
+
     <div class="container">
         <header class="header">
 
             <div class="menu-toggle__container">
                 <input type="checkbox" id="menu-toggle" name="menu-toggle" />
-                <label for="menu-toggle"></label>
+                <label for="menu-toggle" aria-label="Menu"></label>
             </div>
             <div class="header__content">
 
@@ -28,39 +32,58 @@
                         <li><a href="./index.html#home" class="button">Accueil</a></li>
                         <li><a href="./index.html#projects" class="button">Réalisations</a></li>
                         <li>
+
+
+
                             <ul class="nav__projects">
+
                                 <li>
-                                    <a href="./01_koi.html" title="Génération procédurale de poissons koi">
-                                        <div class="img__container debossed"> <img src="./assets/images/koi.avif" alt="Koi"></div>
+                                    <a href="./01_koi.html" class="">
+                                        <div class="img__container debossed">
+                                            <img src="./assets/images/koi/koi.png" alt="Koi procéduraux">
+                                        </div>
                                         <p class="debossed">Koi procéduraux</p>
                                     </a>
                                 </li>
+
                                 <li>
-                                    <a href="./02_hand.html" title="Reproduction et animation d'une illustration">
-                                        <div class="img__container debossed"> <img src="./assets/images/hand.avif" alt="Koi"></div>
+                                    <a href="./02_hand.html" class="">
+                                        <div class="img__container debossed">
+                                            <img src="./assets/images/hand/hand_result.png" alt="Illustration animée">
+                                        </div>
                                         <p class="debossed">Illustration animée</p>
                                     </a>
                                 </li>
+
                                 <li>
-                                    <a href="./03_typo.html" title="Typographie cinétique">
-                                        <div class="img__container debossed"> <img src="./assets/images/kinetic_typography.avif" alt="Koi">
+                                    <a href="./03_typo.html" class="">
+                                        <div class="img__container debossed">
+                                            <img src="./assets/images/typo/typo_p2.png" alt="Typographie cinétique">
                                         </div>
                                         <p class="debossed">Typographie cinétique</p>
                                     </a>
                                 </li>
+
                                 <li>
-                                    <a href="#" title="Génération procédurale d'arbres">
-                                        <div class="img__container debossed"> <img src="./assets/images/forest.avif" alt="Koi"></div>
+                                    <a href="./04_forest.html" class="">
+                                        <div class="img__container debossed">
+                                            <img src="./assets/images/forest/forest.avif" alt="Arbres procéduraux">
+                                        </div>
                                         <p class="debossed">Arbres procéduraux</p>
                                     </a>
                                 </li>
+
                                 <li>
-                                    <a href="#" title="Collection d'illustrations et animations">
-                                        <div class="img__container debossed"> <img src="./assets/images/lilypads.avif" alt="Koi"></div>
-                                        <p class="debossed">Illustrations et animations</p>
+                                    <a href="./05_collection.html" class="">
+                                        <div class="img__container debossed">
+                                            <img src="./assets/images/collection/lilypads.png" alt="Collection de projets">
+                                        </div>
+                                        <p class="debossed">Collection de projets</p>
                                     </a>
                                 </li>
+
                             </ul>
+
                         </li>
                         <li><a href="./index.html#about" class="button">Qualifications</a></li>
                         <li><a href="./index.html#video" class="button">Profil</a></li>
@@ -72,14 +95,14 @@
                     <ul>
                         <li><a class="button" href="mailto:pichealextemp@gmail.com">pichealextemp@gmail.com</a></li>
                         <li><a class="button" href="tel:+5149840452">514-984-0452</a></li>
-                        <li><a class="button" href="https://www.linkedin.com/in/alexandre-pich%C3%A9-bb35a5306/" target="_blank">LinkedIn</a></li>
-                        <li><a class="button" href="#">CV</a></li>
+                        <li><a class="button" href="https://www.linkedin.com/in/alexandre-pich%C3%A9-bb35a5306/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a class="button" href="assets/cv_alexandre_piche.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                        </li>
                     </ul>
                 </nav>
 
                 <div class="surface-sm">
                     <h3>Alexandre Piché</h3>
-                    <!-- <p class="subtitle">Alexandre Piché</p> -->
                     <p>Créateur multidisciplinaire</p>
                 </div>
 
@@ -91,13 +114,11 @@
         <div class="main">
 
 
-
             <section id="home" class="square surface flex-column embossed">
 
                 <div class="img__container debossed">
-                    <img src="./assets/images/lilypads.avif" alt="Hero">
-                    <p class="surface">Je combine 3D, programmation et shaders pour donner vie à des visuels
-                        vivants et créatifs.</p>
+                    <img src="./assets/images/collection/lilypads.png" alt="Hero">
+                    <p class="surface">Je combine 3D, programmation et shaders pour créer des visuels vivants et inventifs.</p>
                 </div>
 
                 <div>
@@ -114,14 +135,14 @@
 
                     <a href="./01_koi.html" class="project grow">
                         <div class="img__container debossed">
-                            <img src="./assets/images/koi.avif" alt="">
+                            <img src="./assets/images/koi/koi.png" alt="Poissons koi">
                         </div>
                         <div class="subdivision flex-column debossed">
                             <p class="project_title">Génération procédurale de poissons koi</p>
                             <div class="tags">
                                 <span class="">p5.js</span>
-                                <span class="">Personel</span>
-                                <span class="">2025</span>
+                                <span class="">personnel</span>
+                                <span class="">2024-2026</span>
                             </div>
                             <div class="visit embossed">+</div>
                         </div>
@@ -129,13 +150,13 @@
 
                     <a href="./02_hand.html" class="project grow">
                         <div class="img__container debossed">
-                            <img src="./assets/images/hand.avif" alt="">
+                            <img src="./assets/images/hand/hand_result.png" alt="Illustration de main">
                         </div>
                         <div class="subdivision flex-column debossed">
                             <p class="project_title">Reproduction et animation d'une illustration</p>
                             <div class="tags">
                                 <span class="">Blender</span>
-                                <span class="">Personel</span>
+                                <span class="">personnel</span>
                                 <span class="">2026</span>
                             </div>
                             <div class="visit embossed">+</div>
@@ -144,7 +165,7 @@
 
                     <a href="./03_typo.html" class="project grow">
                         <div class="img__container debossed">
-                            <img src="./assets/images/kinetic_typography.avif" alt="">
+                            <img src="./assets/images/typo/typo_p2.png" alt="Capture d'écran de l'animation">
                         </div>
                         <div class="subdivision flex-column debossed">
                             <p class="project_title">Typographie cinétique</p>
@@ -157,31 +178,31 @@
                         </div>
                     </a>
 
-                    <a href="./project.html" class="project grow">
+                    <a href="./04_forest.html" class="project grow">
                         <div class="img__container debossed">
-                            <img src="./assets/images/forest.avif" alt="">
+                            <img src="./assets/images/forest/forest.avif" alt="Arbres">
                         </div>
                         <div class="subdivision flex-column debossed">
                             <p class="project_title">Génération procédurale d'arbres</p>
                             <div class="tags">
                                 <span class="">Godot</span>
-                                <span class="">Personel</span>
-                                <span class="">2026</span>
+                                <span class="">personnel</span>
+                                <span class="">2025-2026</span>
                             </div>
                             <div class="visit embossed">+</div>
                         </div>
                     </a>
 
-                    <a href="./project.html" class="project grow">
+                    <a href="./05_collection.html" class="project grow">
                         <div class="img__container debossed">
-                            <img src="./assets/images/lilypads.avif" alt="">
+                            <img src="./assets/images/collection/lilypads.png" alt="Étang">
                         </div>
                         <div class="subdivision flex-column debossed">
-                            <p class="project_title">Collection d'illustrations et animations</p>
+                            <p class="project_title">Collection d'illustrations et d'animations</p>
                             <div class="tags">
                                 <span class="">Blender</span>
-                                <span class="">Personel</span>
-                                <span class="">2024 - 2026</span>
+                                <span class="">personnel</span>
+                                <span class="">2025-2026</span>
                             </div>
                             <div class="visit embossed">+</div>
                         </div>
@@ -197,8 +218,9 @@
                     <div class="flex-row grow sm-column">
 
                         <div class="img__container grow debossed">
+                            <img src="./assets/images/portrait_transparent.png" alt="Portrait">
                             <p class="legend">Photo par Alexandre Donato © 2026</p>
-                            <img src="./assets/images/portrait.png" alt="Portrait">
+                            <canvas class="behind" data-shader="assets/shaders/flowers.frag"></canvas>
                         </div>
 
 
@@ -250,8 +272,8 @@
                 <div class="flex-column grow">
                     <div class="flex-row grow sm-column">
 
-                        <div class="img__container js-video debossed">
-                            <iframe class="video grow" src="https://www.youtube-nocookie.com/embed/Py7AD48N3qk?si=Sm5lFl3nSD2eEf4P&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="img__container debossed">
+                            <iframe src="https://www.youtube-nocookie.com/embed/gFCheQ8yu6M?si=wggRjXF_7xyZaC-N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
 
 
@@ -259,8 +281,8 @@
                             <div class="subdivision debossed">
                                 <h3>Loisirs</h3>
                                 <ul>
-                                    <li>Lecture</li>
                                     <li>Vivariums</li>
+                                    <li>Marche</li>
                                     <li>Voyages</li>
                                 </ul>
                             </div>
@@ -283,9 +305,10 @@
 
                         <div class="subdivision debossed">
                             <h3>Politique de déclaration de l'utilisation de l'IA</h3>
-                            <p class="small">L'IA générative n'a pas été utilisée pour créer ce portfolio, mais certains projets y
-                                ont eu recours. Les détails sont précisés dans les fiches de
-                                projet.
+                            <p class="small">Pour le portfolio, j'ai utilisé ChatGPT et Claude pour explorer, générer,
+                                corriger,
+                                compléter, itérer et améliorer une partie du code. Surtout pour la composant JavaScript des shaders
+                                et les shaders eux-mêmes. Pour les projets, les détails sont précisés dans leurs fiches respectives.
                             </p>
                         </div>
 

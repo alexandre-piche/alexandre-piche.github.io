@@ -539,6 +539,7 @@ a * {
   background-color: var(--color-white);
 }
 
+div > a,
 p > a {
   text-decoration: none;
   color: var(--color-primary);
@@ -589,13 +590,11 @@ ul {
 }
 .container {
   padding: var(--padding-dynamic);
-  min-height: 100vh;
   display: flex;
   justify-content: center;
 }
 
 .main {
-  min-height: 100vh;
   max-width: calc(100vh - var(--padding-2x));
   display: flex;
   flex-direction: column;
@@ -614,6 +613,9 @@ ul {
 .surface {
   padding: var(--spacing-6x);
   background-color: var(--color-surface);
+}
+.surface .surface {
+  padding: var(--spacing-3x);
 }
 
 .surface-sm {
@@ -661,6 +663,15 @@ ul {
     padding: var(--spacing-3x);
   }
 }
+#a404 {
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  flex-grow: 0;
+}
+#a404 h1 {
+  color: var(--color-white);
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -914,6 +925,7 @@ li:has(> .nav__projects) {
   min-height: 0;
   min-width: 0;
   display: flex;
+  background-color: var(--color-black);
 }
 .img__container p.surface {
   position: absolute;
@@ -1054,8 +1066,45 @@ section.contact {
   flex-grow: 1;
 }
 
-.video {
-  border-radius: var(--border-radius);
+iframe {
+  border-radius: inherit;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+canvas[data-shader] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0s;
+}
+canvas[data-shader][data-state=ready] {
+  opacity: 1;
+}
+
+*:has(> canvas[data-state=error]) {
+  background-color: var(--color-bg);
+}
+
+*:has(> .behind) {
+  position: relative;
+  isolation: isolate;
+}
+
+.behind {
+  z-index: -1;
+}
+
+canvas.fixed {
+  --h: 6vh;
+  width: 100vw;
+  height: var(--h);
+  top: calc(100vh - var(--h));
+  position: fixed;
 }
 
 :root {
