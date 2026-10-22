@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio d'Alexandre Piché : 3D, programmation et shaders pour des visuels vivants et créatifs.">
+    <title>Alexandre Piché | Portfolio</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/components/ShaderCanvas.js" defer></script>
+
+</head>
+
+<body>
+    <canvas class="behind fixed" data-shader="assets/shaders/grass.frag" data-seed="1"></canvas>
+
+    <div class="container">
+        <header class="header">
+
+            <div class="menu-toggle__container">
+                <input type="checkbox" id="menu-toggle" name="menu-toggle" />
+                <label for="menu-toggle" aria-label="Menu"></label>
+            </div>
+            <div class="header__content">
+
+
+                <nav class="nav__main">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="./index.html#home" class="button">Accueil</a></li>
+                        <li><a href="./index.html#projects" class="button">Réalisations</a></li>
+                        <li>
+
+
+
+                            <ul class="nav__projects">
+
+                                <li>
+                                    <a href="./01_koi.html" class="">
+                                        <div class="img__container debossed">
+                                            <img src="./assets/images/koi/koi.png" alt="Koi procéduraux">
+                                        </div>
+                                        <p class="debossed">Koi procéduraux</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="./02_hand.html" class="">
+                                        <div class="img__container debossed">
+                                            <img src="./assets/images/hand/hand_result.png" alt="Illustration animée">
+                                        </div>
+                                        <p class="debossed">Illustration animée</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="./03_typo.html" class="active">
+                                        <div class="img__container debossed">
+                                            <img src="./assets/images/typo/typo_p2.png" alt="Typographie cinétique">
+                                        </div>
+                                        <p class="debossed">Typographie cinétique</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="./04_forest.html" class="">
+                                        <div class="img__container debossed">
+                                            <img src="./assets/images/forest/forest.avif" alt="Arbres procéduraux">
+                                        </div>
+                                        <p class="debossed">Arbres procéduraux</p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="./05_collection.html" class="">
+                                        <div class="img__container debossed">
+                                            <img src="./assets/images/collection/lilypads.png" alt="Collection de projets">
+                                        </div>
+                                        <p class="debossed">Collection de projets</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+                        <li><a href="./index.html#about" class="button">Qualifications</a></li>
+                        <li><a href="./index.html#video" class="button">Profil</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="nav__links">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a class="button" href="mailto:pichealextemp@gmail.com">pichealextemp@gmail.com</a></li>
+                        <li><a class="button" href="tel:+5149840452">514-984-0452</a></li>
+                        <li><a class="button" href="https://www.linkedin.com/in/alexandre-pich%C3%A9-bb35a5306/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a class="button" href="assets/cv_alexandre_piche.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="surface-sm">
+                    <h3>Alexandre Piché</h3>
+                    <p>Créateur multidisciplinaire</p>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div class="main">
+
+
+
+            <section class="square surface embossed flex-column">
+
+                <h2>Typographie cinétique avec After Effects</h2>
+                <div class="img__container debossed">
+                    <img src="./assets/images/typo/typo_p2.png" alt="Hero">
+                </div>
+
+                <div class="surface-sm">
+                    <p>Projet <strong>scolaire</strong> où il fallait faire une <strong>typographie cinétique</strong> dans
+                        <strong>After Effects</strong>. J'ai choisi la chanson
+                        <strong>LIFE</strong>, par <a href="https://www.youtube.com/@Neurosama" target="_blank" rel="noopener noreferrer">Neuro-sama</a>.
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="square surface embossed flex-column">
+
+                <h2>Informations</h2>
+                <div class="flex-row grow">
+                    <div class="subdivision grow debossed">
+                        <h3>Crédits</h3>
+                        <div class="flex-column">
+                            <div class="surface flex-column embossed">
+                                <p>Chanson d'origine par <a href="https://www.youtube.com/@Neurosama" target="_blank" rel="noopener noreferrer">Neuro-sama</a>
+                                </p>
+                                <div class="img__container debossed">
+                                    <iframe src="https://www.youtube-nocookie.com/embed/MDc1mjrIsPM?si=Y3C_4qLNr2_pWORe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="surface-xs">Aucune ressource externe utilisée.</div>
+                        </div>
+                    </div>
+                    <div class="subdivision debossed">
+                        <h3>Contexte</h3>
+                        <div class="flex-column nowrap">
+                            <div class="surface-xs">After Effects</div>
+                            <div class="surface-xs">Projet scolaire</div>
+                            <div class="surface-xs">Projet solo</div>
+                            <div class="surface-xs">2025</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subdivision">
+                    <h3>Utilisation de l'IA générative?</h3>
+                    <p>Aucune utilisation dans ce projet.</p>
+                </div>
+
+            </section>
+
+            <section class="square surface embossed flex-column">
+
+                <div class="flex-row flex-space-between">
+                    <p class="subtitle">Processus 1/5</p>
+                    <h2>Analyse de la chanson</h2>
+                </div>
+                <div class="flex-row grow">
+                    <div class="img__container debossed grow">
+                        <img src="./assets/images/typo/typo_theme.png" alt="Capture d'écran de la vidéo">
+                        <p class="legend"><a href="https://www.youtube.com/watch?v=MDc1mjrIsPM" target="_blank" rel="noopener noreferrer">Vidéo</a></p>
+                    </div>
+                    <div class="img__container debossed grow">
+                        <img src="./assets/images/typo/typo_lyrics.png" alt="Paroles de la chanson">
+                        <p class="legend"><a href="https://genius.com/Neuro-sama-life-lyrics" target="_blank" rel="noopener noreferrer">Paroles de la chanson</a></p>
+                    </div>
+                </div>
+
+                <div class="surface-sm">
+                    <p>Lire les <strong>paroles</strong>, regarder la <strong>vidéo</strong>, dégager le <strong>thème</strong>
+                        de la chanson pour <strong>orienter</strong> l'animation, les
+                        couleurs et l'atmosphère désirée.</p>
+                </div>
+
+            </section>
+
+            <section class="square surface embossed flex-column">
+
+                <div class="flex-row flex-space-between">
+                    <p class="subtitle">Processus 2/5</p>
+                    <h2>La structure</h2>
+                </div>
+
+
+                <div class="flex-row grow">
+                    <div class="img__container debossed grow">
+                        <img src="./assets/images/typo/typo_p1.png" alt="Capture d'écran de l'animation">
+                    </div>
+                    <div class="img__container debossed grow">
+                        <img src="./assets/images/typo/typo_p2.png" alt="Capture d'écran de l'animation">
+                    </div>
+                </div>
+
+                <div class="flex-row grow">
+                    <div class="img__container debossed grow">
+                        <img src="./assets/images/typo/typo_p3.png" alt="Capture d'écran de l'animation">
+                    </div>
+                    <div class="img__container debossed grow">
+                        <img src="./assets/images/typo/typo_p4.png" alt="Capture d'écran de l'animation">
+                    </div>
+                </div>
+
+                <div class="surface-sm">
+                    <p>J'ai <strong>séparé</strong> l'animation en distinct <strong>segments</strong> pour <strong>aise</strong>
+                        d'animation tout en suivant la <strong>structure</strong> de la
+                        chanson.</p>
+                </div>
+
+            </section>
+
+
+            <section class="square surface embossed flex-column">
+
+                <div class="flex-row flex-space-between">
+                    <p class="subtitle">Processus 3/5</p>
+                    <h2>L'animation</h2>
+                </div>
+
+                <div class="img__container debossed grow">
+                    <img src="./assets/images/typo/typo_anim.gif" alt="Animation">
+                </div>
+
+                <div class="surface-sm">
+                    <p>J'ai mis de l'effort dans la <strong>fluidité</strong> de l'<strong>animation</strong>, espérant qu'elle soit
+                        facilement <strong>digestible</strong>.</p>
+                </div>
+
+            </section>
+
+            <section class="square surface embossed flex-column">
+
+                <div class="flex-row flex-space-between">
+                    <p class="subtitle">Processus 4/5</p>
+                    <h2>L'arrière-plan</h2>
+                </div>
+
+                <div class="img__container debossed grow">
+                    <img src="./assets/images/typo/typo_bg.gif" alt="Arrière-plan">
+                </div>
+
+                <div class="surface-sm">
+                    <p>J'ai gardé l'arrière-plan simple pour ne <strong>pas distraire</strong> des animations, mais avec un peu de
+                        <strong>mouvement</strong> pour
+                        <strong>remplir</strong> les moments <strong>vides</strong>.
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="square surface embossed flex-column">
+
+                <div class="flex-row flex-space-between">
+                    <p class="subtitle">Processus 5/5</p>
+                    <h2>Le personnage</h2>
+                </div>
+
+                <div class="img__container debossed grow">
+                    <img src="./assets/images/typo/typo_i.png" alt="I">
+                </div>
+
+                <div class="surface-sm">
+                    <p>J'ai eu l'idée de garder le <strong>personnage</strong> au centre de l'écran et d'avoir les
+                        «<strong> I </strong>» chevauchent celui-ci alors que
+                        je cherchais comment <strong>agencer</strong> les <strong>visuels selon le thème</strong>. Cela fonctionne
+                        aussi
+                        comme une <strong>ancre</strong> visuelle ainsi qu'un
+                        <strong>motif récurrent</strong>.
+                    </p>
+                </div>
+
+            </section>
+
+
+
+            <section class="square surface embossed flex-column">
+
+                <h2>Résultat</h2>
+
+                <div class="img__container debossed grow">
+                    <iframe src="https://www.youtube-nocookie.com/embed/1za2TWuBCzs?si=IQP81aZSDrKVdF4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="subdivision">
+                    <h3>En conclusion</h3>
+                    <p>Je n'avais jamais <strong>animé</strong> de <strong>texte</strong> auparavant, ce fut donc un
+                        <strong>défi</strong> en terme d'<strong>explorer</strong> ce qui est possible,
+                        mais aussi d'<strong>éviter</strong> que ce soit trop standard ou <strong>générique</strong>.
+                    </p>
+                </div>
+
+            </section>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
