@@ -409,6 +409,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overscroll-behavior-y: none;
+}
+
 /* ==========================================================================
    BODY / ELEMENT
    Le body permet d'initialiser les propriétés générales de la page.
@@ -615,7 +620,8 @@ ul {
 }
 
 .square {
-  flex-grow: 1;
+  flex-grow: 0;
+  flex-shrink: 0;
   height: calc(100vh - var(--padding-2x));
   height: calc(100svh - var(--padding-2x));
   width: 100%;
@@ -1153,6 +1159,7 @@ canvas.fixed {
   width: 100vw;
   height: var(--h);
   top: calc(100vh - var(--h));
+  top: calc(100svh - var(--h));
 }
 
 :root {
