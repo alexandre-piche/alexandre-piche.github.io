@@ -1153,7 +1153,6 @@ canvas.fixed {
   width: 100vw;
   height: var(--h);
   top: calc(100vh - var(--h));
-  top: calc(100dvh - var(--h));
 }
 
 :root {
