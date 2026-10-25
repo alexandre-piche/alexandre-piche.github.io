@@ -604,7 +604,7 @@ ul {
 }
 
 .main {
-  max-width: calc(100dvh - var(--padding-2x));
+  max-width: calc(100svh - var(--padding-2x));
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -617,7 +617,7 @@ ul {
 .square {
   flex-grow: 1;
   height: calc(100vh - var(--padding-2x));
-  height: calc(100dvh - var(--padding-2x));
+  height: calc(100svh - var(--padding-2x));
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -671,7 +671,7 @@ ul {
   }
   .square {
     height: 100vh;
-    height: 100dvh;
+    height: 100svh;
     scroll-margin-top: initial;
   }
   .subdivision {
