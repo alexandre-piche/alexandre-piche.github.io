@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght,GRAD,ROND@6..144,1..1000,100,100&family=Jost:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght,GRAD,ROND@6..144,1..1000,100,100&family=Jost:wght@500..900&display=swap");
 /* ==========================================================================
    cover / tools
    ========================================================================== */
@@ -447,7 +447,6 @@ h1 {
   letter-spacing: 6%;
   text-transform: uppercase;
   margin: 0;
-  margin-top: var(--spacing-3x);
 }
 
 h2 {
@@ -480,9 +479,10 @@ p {
   line-height: 1.5;
 }
 
+.subtitle > *,
 .subtitle {
   font-size: clamp(1.13rem, 0.73vw + 0.91rem, 1.56rem);
-  color: var(--color-primary);
+  color: var(--color-dark);
   font-weight: 400;
   letter-spacing: 12%;
   text-transform: capitalize;
@@ -518,15 +518,18 @@ a * {
   color: var(--color-primary);
 }
 
+p.legend:has(> a),
 .button {
   color: var(--color-primary);
   background-color: var(--color-surface);
   text-decoration: none;
 }
+p.legend:has(> a):hover,
 .button:hover {
   background-color: var(--color-white);
   color: var(--color-bg);
 }
+p.legend:has(> a):hover::before,
 .button:hover::before {
   background-color: var(--color-bg);
 }
@@ -596,6 +599,7 @@ ul {
 
 .main {
   max-width: calc(100vh - var(--padding-2x));
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--padding-2x);
@@ -662,6 +666,9 @@ ul {
   .subdivision {
     padding: var(--spacing-3x);
   }
+  .sm-hide {
+    display: none;
+  }
 }
 #a404 {
   height: -moz-fit-content !important;
@@ -708,6 +715,10 @@ ul {
   .sm-row {
     flex-direction: row;
   }
+  .sm-adjustable {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 .nowrap {
   text-wrap: nowrap;
@@ -725,7 +736,7 @@ header {
   flex-direction: column;
   gap: var(--spacing-9x);
   overflow-y: scroll;
-  padding: 0 var(--spacing-3x);
+  padding-left: var(--spacing-3x);
 }
 .header__content::-webkit-scrollbar-thumb {
   background-color: blue;
@@ -862,12 +873,13 @@ header {
     z-index: 10;
     padding: var(--padding);
     box-shadow: 0 0 var(--spacing-9x) 0 var(--color-shadow), var(--embossed);
+    transition: transform 0.08s ease-in;
   }
   .menu-toggle__container {
     display: block;
   }
   header:has(.menu-toggle__container input:not(:checked)) .header__content {
-    display: none;
+    transform: translateX(100%);
   }
 }
 @media (width < 350px) {
@@ -920,6 +932,11 @@ li:has(> .nav__projects) {
   color: var(--color-white);
 }
 
+.header__content .flex-column,
+.header__content .flex-row {
+  gap: var(--spacing-2x);
+}
+
 .img__container {
   flex-grow: 1;
   min-height: 0;
@@ -936,11 +953,6 @@ li:has(> .nav__projects) {
   width: fit-content;
   max-width: 50%;
 }
-.img__container p.surface.bottom-right {
-  top: initial;
-  right: var(--spacing-6x);
-  bottom: var(--spacing-6x);
-}
 .img__container p.legend {
   position: absolute;
   width: -moz-fit-content;
@@ -952,6 +964,30 @@ li:has(> .nav__projects) {
   padding: 2px var(--spacing-1x-5) 1px;
   background-color: var(--color-surface);
   border-radius: var(--border-radius);
+}
+.img__container .image-viewer__link {
+  position: absolute;
+  top: var(--spacing-3x);
+  right: var(--spacing-3x);
+  color: var(--color-primary);
+  font-size: clamp(1rem, 0.42vw + 0.88rem, 1.25rem);
+  font-weight: 600;
+  background-color: var(--color-surface);
+  padding: 0 var(--spacing-1x-5);
+  aspect-ratio: 1;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img__container .image-viewer__link:hover {
+  background-color: var(--color-white);
+  color: var(--color-bg);
+}
+.img__container .image-viewer__link:hover::before {
+  background-color: var(--color-bg);
 }
 
 @media (width < 768px) {
@@ -1145,6 +1181,8 @@ section {
   transition: box-shadow 0.1s ease-out;
 }
 
+p.legend:has(> a)::after,
+.image-viewer__link::after,
 .button:hover::after {
   box-shadow: var(--embossed);
 }
@@ -1153,6 +1191,8 @@ section {
   box-shadow: var(--embossed);
 }
 
+p.legend:has(> a):hover::after,
+.image-viewer__link:hover::after,
 .button::after,
 .debossed::after {
   box-shadow: var(--debossed);
@@ -1168,11 +1208,15 @@ a:hover .embossed::after,
   box-shadow: var(--debossed);
 }
 
+p.legend:has(> a),
+.image-viewer__link,
 .button,
 .embossed,
 .debossed {
   position: relative;
 }
+p.legend:has(> a)::after,
+.image-viewer__link::after,
 .button::after,
 .embossed::after,
 .debossed::after {

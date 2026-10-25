@@ -5,11 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio d'Alexandre Piché : 3D, programmation et shaders pour des visuels vivants et créatifs.">
+
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>Alexandre Piché | Portfolio</title>
 
     <link rel="stylesheet" href="styles/main.css" />
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/components/ShaderCanvas.js" defer></script>
 
 </head>
 
@@ -40,7 +41,7 @@
                                 <li>
                                     <a href="./01_koi.html" class="">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/koi/koi.png" alt="Koi procéduraux">
+                                            <img src="./assets/images/koi/koi.avif" alt="Koi procéduraux">
                                         </div>
                                         <p class="debossed">Koi procéduraux</p>
                                     </a>
@@ -49,7 +50,7 @@
                                 <li>
                                     <a href="./02_hand.html" class="active">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/hand/hand_result.png" alt="Illustration animée">
+                                            <img src="./assets/images/hand/hand_result.avif" alt="Illustration animée">
                                         </div>
                                         <p class="debossed">Illustration animée</p>
                                     </a>
@@ -58,7 +59,7 @@
                                 <li>
                                     <a href="./03_typo.html" class="">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/typo/typo_p2.png" alt="Typographie cinétique">
+                                            <img src="./assets/images/typo/typo_p2.avif" alt="Typographie cinétique">
                                         </div>
                                         <p class="debossed">Typographie cinétique</p>
                                     </a>
@@ -76,7 +77,7 @@
                                 <li>
                                     <a href="./05_collection.html" class="">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/collection/lilypads.png" alt="Collection de projets">
+                                            <img src="./assets/images/collection/lilypads.avif" alt="Collection de projets">
                                         </div>
                                         <p class="debossed">Collection de projets</p>
                                     </a>
@@ -94,10 +95,33 @@
                     <h3>Contact</h3>
                     <ul>
                         <li><a class="button" href="mailto:pichealextemp@gmail.com">pichealextemp@gmail.com</a></li>
-                        <li><a class="button" href="tel:+5149840452">514-984-0452</a></li>
-                        <li><a class="button" href="https://www.linkedin.com/in/alexandre-pich%C3%A9-bb35a5306/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a class="button" href="assets/cv_alexandre_piche.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-                        </li>
+                        <li><a class="button" href="tel:+15149840452">514-984-0452</a></li>
+
+                        <div class="flex-row">
+                            <div class="flex-column grow">
+
+                                <li class="grow"><a class="button" href="https://www.artstation.com/alexandre-piche" target="_blank" rel="noopener">ArtStation</a>
+                                </li>
+
+
+                                <li class="grow"><a class="button" href="https://www.linkedin.com/in/alexandre-pich%C3%A9-bb35a5306/" target="_blank" rel="noopener">LinkedIn</a>
+                                </li>
+
+                            </div>
+
+                            <div class="flex-column grow">
+
+                                <li class="grow"><a class="button" href="https://alexandre-piche.itch.io/" target="_blank" rel="noopener">Itch.io</a>
+                                </li>
+
+                                <li class="grow"><a class="button" href="assets/cv_alexandre_piche.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                                </li>
+
+                            </div>
+                        </div>
+
+
+
                     </ul>
                 </nav>
 
@@ -111,15 +135,15 @@
         </header>
 
 
-        <div class="main">
+        <main class="main">
 
 
 
             <section class="square surface embossed flex-column">
 
                 <h2>Reproduction et animation d'une illustration</h2>
-                <div class="img__container debossed">
-                    <img src="./assets/images/hand/hand_result.png" alt="Hero">
+                <div class="img__container debossed" data-viewable>
+                    <img src="./assets/images/hand/hand_gif.gif" alt="Hero" fetchpriority="high">
                 </div>
 
                 <div class="surface-sm">
@@ -130,10 +154,10 @@
 
             </section>
 
-            <section class="square surface embossed flex-column">
+            <section class="square surface embossed flex-column sm-adjustable">
 
                 <h2>Informations</h2>
-                <div class="flex-row grow">
+                <div class="flex-row sm-column grow">
                     <div class="subdivision debossed">
                         <h3>Crédits</h3>
                         <div class="flex-column">
@@ -141,7 +165,7 @@
                                 <p>Illustration d'origine par <a href="https://www.lesliesuper.net/" target="_blank" rel="noopener">Lesliesuper</a>
                                 </p>
                                 <div class="img__container debossed">
-                                    <img src="./assets/images/hand/hand_ref_by_lesliesuper.png" alt="Image de référence">
+                                    <img src="./assets/images/hand/hand_ref_by_lesliesuper.avif" alt="Image de référence">
                                     <p class="legend"><a href="https://www.lesliesuper.net/" target="_blank" rel="noopener">lesliesuper.net</a></p>
                                 </div>
                             </div>
@@ -168,11 +192,11 @@
             <section class="square surface embossed flex-column">
 
                 <div class="flex-row flex-space-between">
-                    <p class="subtitle">Processus 1/5</p>
+                    <p class="subtitle"><span class="sm-hide">Processus </span>1/5</p>
                     <h2>Les gouttes</h2>
                 </div>
-                <div class="img__container debossed grow">
-                    <img src="./assets/images/hand/hand_1.png" alt="Système de noeuds
+                <div class="img__container debossed grow" data-viewable>
+                    <img src="./assets/images/hand/hand_1.avif" alt="Système de noeuds
                 géométriques">
                 </div>
 
@@ -190,20 +214,20 @@
             <section class="square surface embossed flex-column">
 
                 <div class="flex-row flex-space-between">
-                    <p class="subtitle">Processus 2/5</p>
+                    <p class="subtitle"><span class="sm-hide">Processus </span>2/5</p>
                     <h2>La main</h2>
                 </div>
 
-                <div class="img__container debossed grow">
-                    <img src="./assets/images/hand/hand_2_shader.png" alt="Shader">
+                <div class="img__container debossed grow" data-viewable>
+                    <img src="./assets/images/hand/hand_2_shader.avif" alt="Shader">
                     <p class="legend">Le shader</p>
                 </div>
                 <div class="flex-row">
-                    <div class="img__container debossed grow-2">
-                        <img src="./assets/images/hand/hand_2_hand.png" alt="Main">
+                    <div class="img__container debossed grow-2" data-viewable>
+                        <img src="./assets/images/hand/hand_2_hand.avif" alt="Main">
                     </div>
-                    <div class="img__container debossed grow">
-                        <img src="./assets/images/collection/char_plain.png" alt="Personnage">
+                    <div class="img__container debossed grow" data-viewable>
+                        <img src="./assets/images/collection/char_plain.avif" alt="Personnage">
                         <p class="legend"><a href="05_collection.html#char">Projet antérieur</a></p>
                     </div>
                 </div>
@@ -221,20 +245,20 @@
             <section class="square surface embossed flex-column">
 
                 <div class="flex-row flex-space-between">
-                    <p class="subtitle">Processus 3/5</p>
+                    <p class="subtitle"><span class="sm-hide">Processus </span>3/5</p>
                     <h2>L'arrière-plan</h2>
                 </div>
 
-                <div class="img__container debossed grow">
-                    <img src="./assets/images/hand/hand_3_bg_shader.png" alt="Shader">
+                <div class="img__container debossed grow" data-viewable>
+                    <img src="./assets/images/hand/hand_3_bg_shader.avif" alt="Shader">
                     <p class="legend">Shader du quad arrière</p>
                 </div>
                 <div class="flex-row">
-                    <div class="img__container debossed grow-2">
-                        <img src="./assets/images/hand/hand_3_result.png" alt="Main">
+                    <div class="img__container debossed grow-2" data-viewable>
+                        <img src="./assets/images/hand/hand_3_result.avif" alt="Main">
                     </div>
-                    <div class="img__container debossed grow">
-                        <img src="./assets/images/hand/hand_3_scene.png" alt="Personnage">
+                    <div class="img__container debossed grow" data-viewable>
+                        <img src="./assets/images/hand/hand_3_scene.avif" alt="Personnage">
                     </div>
                 </div>
 
@@ -249,20 +273,20 @@
             <section class="square surface embossed flex-column">
 
                 <div class="flex-row flex-space-between">
-                    <p class="subtitle">Processus 4/5</p>
+                    <p class="subtitle"><span class="sm-hide">Processus </span>4/5</p>
                     <h2>L'animation</h2>
                 </div>
 
-                <div class="img__container debossed grow">
-                    <img src="./assets/images/hand/hand_4_drivers.png" alt="Noeuds">
+                <div class="img__container debossed grow" data-viewable>
+                    <img src="./assets/images/hand/hand_4_drivers.avif" alt="Noeuds">
                     <p class="legend">Utilisation de drivers pour contrôler la fréquence d'images</p>
                 </div>
                 <div class="flex-row">
-                    <div class="img__container debossed grow">
+                    <div class="img__container debossed grow" data-viewable>
                         <img src="./assets/images/hand/hand_4_1s.gif" alt="Animation sur un">
                         <p class="legend">Sur un</p>
                     </div>
-                    <div class="img__container debossed grow">
+                    <div class="img__container debossed grow" data-viewable>
                         <img src="./assets/images/hand/hand_4_3s.gif" alt="Animation sur trois">
                         <p class="legend">Sur trois</p>
                     </div>
@@ -281,21 +305,21 @@
             <section class="square surface embossed flex-column">
 
                 <div class="flex-row flex-space-between">
-                    <p class="subtitle">Processus 5/5</p>
+                    <p class="subtitle"><span class="sm-hide">Processus </span>5/5</p>
                     <h2>Le compositing</h2>
                 </div>
 
-                <div class="img__container debossed grow">
-                    <img src="./assets/images/hand/hand_5_compositing.png" alt="Compositing">
+                <div class="img__container debossed grow" data-viewable>
+                    <img src="./assets/images/hand/hand_5_compositing.avif" alt="Compositing">
                     <p class="legend">Compositing</p>
                 </div>
                 <div class="flex-row">
-                    <div class="img__container debossed grow">
-                        <img src="./assets/images/hand/hand_5_clip.png" alt="Exemple avec clipping">
+                    <div class="img__container debossed grow" data-viewable>
+                        <img src="./assets/images/hand/hand_5_clip.avif" alt="Exemple avec clipping">
                         <p class="legend">Avec clipping</p>
                     </div>
-                    <div class="img__container debossed grow">
-                        <img src="./assets/images/hand/hand_5_noclip.png" alt="Exemple sans clipping">
+                    <div class="img__container debossed grow" data-viewable>
+                        <img src="./assets/images/hand/hand_5_noclip.avif" alt="Exemple sans clipping">
                         <p class="legend">Sans clipping</p>
                     </div>
                 </div>
@@ -315,7 +339,7 @@
 
                 <h2>Résultat</h2>
 
-                <div class="img__container debossed grow">
+                <div class="img__container debossed grow" data-viewable>
                     <img src="./assets/images/hand/hand_gif.gif" alt="Résultat">
                 </div>
 
@@ -331,7 +355,7 @@
 
             </section>
 
-        </div>
+        </main>
     </div>
 </body>
 

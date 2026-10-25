@@ -5,11 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio d'Alexandre Piché : 3D, programmation et shaders pour des visuels vivants et créatifs.">
+
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>Alexandre Piché | Portfolio</title>
 
     <link rel="stylesheet" href="styles/main.css" />
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/components/ShaderCanvas.js" defer></script>
 
 </head>
 
@@ -40,7 +41,7 @@
                                 <li>
                                     <a href="./01_koi.html" class="">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/koi/koi.png" alt="Koi procéduraux">
+                                            <img src="./assets/images/koi/koi.avif" alt="Koi procéduraux">
                                         </div>
                                         <p class="debossed">Koi procéduraux</p>
                                     </a>
@@ -49,7 +50,7 @@
                                 <li>
                                     <a href="./02_hand.html" class="">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/hand/hand_result.png" alt="Illustration animée">
+                                            <img src="./assets/images/hand/hand_result.avif" alt="Illustration animée">
                                         </div>
                                         <p class="debossed">Illustration animée</p>
                                     </a>
@@ -58,7 +59,7 @@
                                 <li>
                                     <a href="./03_typo.html" class="active">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/typo/typo_p2.png" alt="Typographie cinétique">
+                                            <img src="./assets/images/typo/typo_p2.avif" alt="Typographie cinétique">
                                         </div>
                                         <p class="debossed">Typographie cinétique</p>
                                     </a>
@@ -76,7 +77,7 @@
                                 <li>
                                     <a href="./05_collection.html" class="">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/collection/lilypads.png" alt="Collection de projets">
+                                            <img src="./assets/images/collection/lilypads.avif" alt="Collection de projets">
                                         </div>
                                         <p class="debossed">Collection de projets</p>
                                     </a>
@@ -94,10 +95,33 @@
                     <h3>Contact</h3>
                     <ul>
                         <li><a class="button" href="mailto:pichealextemp@gmail.com">pichealextemp@gmail.com</a></li>
-                        <li><a class="button" href="tel:+5149840452">514-984-0452</a></li>
-                        <li><a class="button" href="https://www.linkedin.com/in/alexandre-pich%C3%A9-bb35a5306/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a class="button" href="assets/cv_alexandre_piche.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-                        </li>
+                        <li><a class="button" href="tel:+15149840452">514-984-0452</a></li>
+
+                        <div class="flex-row">
+                            <div class="flex-column grow">
+
+                                <li class="grow"><a class="button" href="https://www.artstation.com/alexandre-piche" target="_blank" rel="noopener">ArtStation</a>
+                                </li>
+
+
+                                <li class="grow"><a class="button" href="https://www.linkedin.com/in/alexandre-pich%C3%A9-bb35a5306/" target="_blank" rel="noopener">LinkedIn</a>
+                                </li>
+
+                            </div>
+
+                            <div class="flex-column grow">
+
+                                <li class="grow"><a class="button" href="https://alexandre-piche.itch.io/" target="_blank" rel="noopener">Itch.io</a>
+                                </li>
+
+                                <li class="grow"><a class="button" href="assets/cv_alexandre_piche.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                                </li>
+
+                            </div>
+                        </div>
+
+
+
                     </ul>
                 </nav>
 
@@ -111,15 +135,16 @@
         </header>
 
 
-        <div class="main">
+        <main class="main">
 
 
 
             <section class="square surface embossed flex-column">
 
                 <h2>Typographie cinétique avec After Effects</h2>
-                <div class="img__container debossed">
-                    <img src="./assets/images/typo/typo_p2.png" alt="Hero">
+                <div class="img__container debossed" data-viewable>
+                    <img src="./assets/images/typo/typo_p2.avif" alt="Hero" fetchpriority="high">
+                    <p class="legend"><a href="#result">Voir le résultat</a></p>
                 </div>
 
                 <div class="surface-sm">
@@ -131,10 +156,10 @@
 
             </section>
 
-            <section class="square surface embossed flex-column">
+            <section class="square surface sm-adjustable embossed flex-column">
 
                 <h2>Informations</h2>
-                <div class="flex-row grow">
+                <div class="flex-row sm-column grow">
                     <div class="subdivision grow debossed">
                         <h3>Crédits</h3>
                         <div class="flex-column">
@@ -142,10 +167,12 @@
                                 <p>Chanson d'origine par <a href="https://www.youtube.com/@Neurosama" target="_blank" rel="noopener noreferrer">Neuro-sama</a>
                                 </p>
                                 <div class="img__container debossed">
-                                    <iframe src="https://www.youtube-nocookie.com/embed/MDc1mjrIsPM?si=Y3C_4qLNr2_pWORe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/MDc1mjrIsPM?si=Y3C_4qLNr2_pWORe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                             </div>
-                            <div class="surface-xs">Aucune ressource externe utilisée.</div>
+                            <div class="surface-xs">Des <strong>tutoriels</strong> ont été utilisés dans le cadre de ce projet, mais
+                                je ne les ai
+                                malheureusement <strong>pas conservés</strong>.</div>
                         </div>
                     </div>
                     <div class="subdivision debossed">
@@ -168,16 +195,16 @@
             <section class="square surface embossed flex-column">
 
                 <div class="flex-row flex-space-between">
-                    <p class="subtitle">Processus 1/5</p>
-                    <h2>Analyse de la chanson</h2>
+                    <p class="subtitle"><span class="sm-hide">Processus </span>1/5</p>
+                    <h2>L'analyse</h2>
                 </div>
-                <div class="flex-row grow">
+                <div class="flex-row sm-column grow">
                     <div class="img__container debossed grow">
-                        <img src="./assets/images/typo/typo_theme.png" alt="Capture d'écran de la vidéo">
-                        <p class="legend"><a href="https://www.youtube.com/watch?v=MDc1mjrIsPM" target="_blank" rel="noopener noreferrer">Vidéo</a></p>
+                        <img src="./assets/images/typo/typo_theme.avif" alt="Capture d'écran de la vidéo">
+                        <p class="legend"><a href="https://www.youtube.com/watch?v=MDc1mjrIsPM" target="_blank" rel="noopener noreferrer">Vidéo de la chanson</a></p>
                     </div>
                     <div class="img__container debossed grow">
-                        <img src="./assets/images/typo/typo_lyrics.png" alt="Paroles de la chanson">
+                        <img src="./assets/images/typo/typo_lyrics.avif" alt="Paroles de la chanson">
                         <p class="legend"><a href="https://genius.com/Neuro-sama-life-lyrics" target="_blank" rel="noopener noreferrer">Paroles de la chanson</a></p>
                     </div>
                 </div>
@@ -193,26 +220,26 @@
             <section class="square surface embossed flex-column">
 
                 <div class="flex-row flex-space-between">
-                    <p class="subtitle">Processus 2/5</p>
+                    <p class="subtitle"><span class="sm-hide">Processus </span>2/5</p>
                     <h2>La structure</h2>
                 </div>
 
 
                 <div class="flex-row grow">
-                    <div class="img__container debossed grow">
-                        <img src="./assets/images/typo/typo_p1.png" alt="Capture d'écran de l'animation">
+                    <div class="img__container debossed grow" data-viewable>
+                        <img src="./assets/images/typo/typo_p1.avif" alt="Capture d'écran de l'animation">
                     </div>
-                    <div class="img__container debossed grow">
-                        <img src="./assets/images/typo/typo_p2.png" alt="Capture d'écran de l'animation">
+                    <div class="img__container debossed grow" data-viewable>
+                        <img src="./assets/images/typo/typo_p2.avif" alt="Capture d'écran de l'animation">
                     </div>
                 </div>
 
                 <div class="flex-row grow">
-                    <div class="img__container debossed grow">
-                        <img src="./assets/images/typo/typo_p3.png" alt="Capture d'écran de l'animation">
+                    <div class="img__container debossed grow" data-viewable>
+                        <img src="./assets/images/typo/typo_p3.avif" alt="Capture d'écran de l'animation">
                     </div>
-                    <div class="img__container debossed grow">
-                        <img src="./assets/images/typo/typo_p4.png" alt="Capture d'écran de l'animation">
+                    <div class="img__container debossed grow" data-viewable>
+                        <img src="./assets/images/typo/typo_p4.avif" alt="Capture d'écran de l'animation">
                     </div>
                 </div>
 
@@ -228,11 +255,11 @@
             <section class="square surface embossed flex-column">
 
                 <div class="flex-row flex-space-between">
-                    <p class="subtitle">Processus 3/5</p>
+                    <p class="subtitle"><span class="sm-hide">Processus </span>3/5</p>
                     <h2>L'animation</h2>
                 </div>
 
-                <div class="img__container debossed grow">
+                <div class="img__container debossed grow" data-viewable>
                     <img src="./assets/images/typo/typo_anim.gif" alt="Animation">
                 </div>
 
@@ -246,11 +273,11 @@
             <section class="square surface embossed flex-column">
 
                 <div class="flex-row flex-space-between">
-                    <p class="subtitle">Processus 4/5</p>
+                    <p class="subtitle"><span class="sm-hide">Processus </span>4/5</p>
                     <h2>L'arrière-plan</h2>
                 </div>
 
-                <div class="img__container debossed grow">
+                <div class="img__container debossed grow" data-viewable>
                     <img src="./assets/images/typo/typo_bg.gif" alt="Arrière-plan">
                 </div>
 
@@ -266,12 +293,12 @@
             <section class="square surface embossed flex-column">
 
                 <div class="flex-row flex-space-between">
-                    <p class="subtitle">Processus 5/5</p>
+                    <p class="subtitle"><span class="sm-hide">Processus </span>5/5</p>
                     <h2>Le personnage</h2>
                 </div>
 
-                <div class="img__container debossed grow">
-                    <img src="./assets/images/typo/typo_i.png" alt="I">
+                <div class="img__container debossed grow" data-viewable>
+                    <img src="./assets/images/typo/typo_i.avif" alt="I">
                 </div>
 
                 <div class="surface-sm">
@@ -288,12 +315,12 @@
 
 
 
-            <section class="square surface embossed flex-column">
+            <section id="result" class="square surface embossed flex-column">
 
                 <h2>Résultat</h2>
 
                 <div class="img__container debossed grow">
-                    <iframe src="https://www.youtube-nocookie.com/embed/1za2TWuBCzs?si=IQP81aZSDrKVdF4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/1za2TWuBCzs?si=IQP81aZSDrKVdF4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
 
                 <div class="subdivision">
@@ -307,7 +334,7 @@
             </section>
 
 
-        </div>
+        </main>
     </div>
 </body>
 

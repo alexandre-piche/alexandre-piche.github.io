@@ -5,11 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio d'Alexandre Piché : 3D, programmation et shaders pour des visuels vivants et créatifs.">
+
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>Alexandre Piché | Portfolio</title>
 
     <link rel="stylesheet" href="styles/main.css" />
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/components/ShaderCanvas.js" defer></script>
 
 </head>
 
@@ -40,7 +41,7 @@
                                 <li>
                                     <a href="./01_koi.html" class="">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/koi/koi.png" alt="Koi procéduraux">
+                                            <img src="./assets/images/koi/koi.avif" alt="Koi procéduraux">
                                         </div>
                                         <p class="debossed">Koi procéduraux</p>
                                     </a>
@@ -49,7 +50,7 @@
                                 <li>
                                     <a href="./02_hand.html" class="">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/hand/hand_result.png" alt="Illustration animée">
+                                            <img src="./assets/images/hand/hand_result.avif" alt="Illustration animée">
                                         </div>
                                         <p class="debossed">Illustration animée</p>
                                     </a>
@@ -58,7 +59,7 @@
                                 <li>
                                     <a href="./03_typo.html" class="">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/typo/typo_p2.png" alt="Typographie cinétique">
+                                            <img src="./assets/images/typo/typo_p2.avif" alt="Typographie cinétique">
                                         </div>
                                         <p class="debossed">Typographie cinétique</p>
                                     </a>
@@ -76,7 +77,7 @@
                                 <li>
                                     <a href="./05_collection.html" class="">
                                         <div class="img__container debossed">
-                                            <img src="./assets/images/collection/lilypads.png" alt="Collection de projets">
+                                            <img src="./assets/images/collection/lilypads.avif" alt="Collection de projets">
                                         </div>
                                         <p class="debossed">Collection de projets</p>
                                     </a>
@@ -94,10 +95,33 @@
                     <h3>Contact</h3>
                     <ul>
                         <li><a class="button" href="mailto:pichealextemp@gmail.com">pichealextemp@gmail.com</a></li>
-                        <li><a class="button" href="tel:+5149840452">514-984-0452</a></li>
-                        <li><a class="button" href="https://www.linkedin.com/in/alexandre-pich%C3%A9-bb35a5306/" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a class="button" href="assets/cv_alexandre_piche.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-                        </li>
+                        <li><a class="button" href="tel:+15149840452">514-984-0452</a></li>
+
+                        <div class="flex-row">
+                            <div class="flex-column grow">
+
+                                <li class="grow"><a class="button" href="https://www.artstation.com/alexandre-piche" target="_blank" rel="noopener">ArtStation</a>
+                                </li>
+
+
+                                <li class="grow"><a class="button" href="https://www.linkedin.com/in/alexandre-pich%C3%A9-bb35a5306/" target="_blank" rel="noopener">LinkedIn</a>
+                                </li>
+
+                            </div>
+
+                            <div class="flex-column grow">
+
+                                <li class="grow"><a class="button" href="https://alexandre-piche.itch.io/" target="_blank" rel="noopener">Itch.io</a>
+                                </li>
+
+                                <li class="grow"><a class="button" href="assets/cv_alexandre_piche.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                                </li>
+
+                            </div>
+                        </div>
+
+
+
                     </ul>
                 </nav>
 
@@ -111,12 +135,13 @@
         </header>
 
 
-        <div class="main">
+        <main class="main">
 
 
             <section id="a404" class="square surface flex-column embossed">
-                <div class="subdivision debossed">
-                    <h1>Oups, page introuvable</h1>
+                <div class="subdivision flex-column debossed">
+                    <h1>Page introuvable</h1>
+                    <a href="index.html" class="button surface">Retour à l'acceuil</a>
                 </div>
 
             </section>
@@ -124,7 +149,7 @@
 
 
 
-        </div>
+        </main>
     </div>
 </body>
 
