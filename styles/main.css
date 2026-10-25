@@ -1154,12 +1154,15 @@ canvas[data-shader][data-state=ready] {
 }
 
 canvas.fixed {
-  --h: 6vh;
+  --h: 6svh;
   position: fixed;
-  width: 100vw;
+  left: 0;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  width: 100%;
   height: var(--h);
-  top: calc(100vh - var(--h));
-  top: calc(100svh - var(--h));
+  z-index: 120 !important;
 }
 
 :root {
