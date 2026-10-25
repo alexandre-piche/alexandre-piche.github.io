@@ -457,6 +457,11 @@ h2 {
   letter-spacing: 1%;
 }
 
+h1,
+h2 {
+  max-width: calc(100% - var(--spacing-12x) - var(--spacing-3x));
+}
+
 h3 {
   color: var(--color-white);
   font-size: clamp(1.5rem, 0.63vw + 1.31rem, 1.88rem);
@@ -486,6 +491,7 @@ p {
   font-weight: 400;
   letter-spacing: 12%;
   text-transform: capitalize;
+  line-height: 1;
 }
 
 .project_title {
@@ -598,16 +604,20 @@ ul {
 }
 
 .main {
-  max-width: calc(100vh - var(--padding-2x));
+  max-width: calc(100dvh - var(--padding-2x));
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--padding-2x);
 }
+.main > section:last-child {
+  margin-bottom: var(--spacing-9x);
+}
 
 .square {
   flex-grow: 1;
   height: calc(100vh - var(--padding-2x));
+  height: calc(100dvh - var(--padding-2x));
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -661,6 +671,7 @@ ul {
   }
   .square {
     height: 100vh;
+    height: 100dvh;
     scroll-margin-top: initial;
   }
   .subdivision {
@@ -839,6 +850,7 @@ header {
   outline-offset: 4px;
 }
 .menu-toggle__container label::after {
+  display: block;
   content: "Menu";
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -861,7 +873,7 @@ header {
   box-shadow: var(--embossed);
 }
 
-@media (width < 1024px) {
+@media (height < 850px), (width < 1024px) {
   .container {
     gap: 0;
   }
@@ -1137,10 +1149,11 @@ canvas[data-shader][data-state=ready] {
 
 canvas.fixed {
   --h: 6vh;
+  position: fixed;
   width: 100vw;
   height: var(--h);
   top: calc(100vh - var(--h));
-  position: fixed;
+  top: calc(100dvh - var(--h));
 }
 
 :root {
