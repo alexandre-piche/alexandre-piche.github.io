@@ -503,6 +503,7 @@ p {
   font-size: clamp(1rem, 0.83vw + 0.75rem, 1.5rem);
   font-weight: 700;
   color: var(--color-black);
+  line-height: 1.2;
 }
 
 .small {
@@ -761,6 +762,11 @@ ul {
   text-wrap: nowrap;
 }
 
+@media (height < 900px) {
+  .short-row {
+    flex-direction: row;
+  }
+}
 header {
   order: 1;
 }
